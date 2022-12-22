@@ -84,6 +84,7 @@ func (d *MoveLegsSkill) OnStart() {
 	if err != nil {
 		log.Error.Println("hexabody can't start:", err)
 	}
+	go d.play()
 }
 
 func (d *MoveLegsSkill) OnClose() {
